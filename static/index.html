@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon">
+    <title>NockNockDoc</title>
+    <link href="static/styles/tailwind.min.css" rel="stylesheet">
+    <link href="static/styles/styles.css" rel="stylesheet">
+</head>
+
+<body class="font-sans min-h-screen p-5">
+    <!-- Wrapper starts here -->
+    <div class="page-container relative min-h-screen">
+        <!-- Header -->
+        <header class="flex items-center justify-center py-4 shadow-md mb-6 bg-gray-100 text-center">
+            <img src="static/assets/logo.png" alt="Company Logo" class="mr-4 w-16 h-16"> <!-- The logo -->
+            <h2 class="text-xl font-semibold">NockNockDoc - Chat With Your PDF Documents - By Mourad GHAFIRI</h2>
+        </header>
+        <!-- Main content: chat and upload -->
+        <div class="flex flex-row justify-center items-start space-x-5 h-full">
+            <div id="chatBox"
+                class="bg-gray-50 flex flex-col p-6 bg-white shadow-lg rounded-lg w-3/4 space-y-6 transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div id='response' style="height: 50vh;" class="border p-4 rounded-md overflow-y-auto h-96 space-y-3">
+                </div>
+                <div id="loadingSpinner" class="hidden flex items-center justify-center">
+                    <div class="loader"></div>
+                    <span id="infoLoading" class="ml-2 text-gray-500">Searching for answer...</span>
+                </div>
+                <form action="" onsubmit="sendMessage(event)" class="flex space-x-3">
+                    <input type="text" id="messageText" placeholder="Your question here..." autocomplete="off"
+                        class="flex-grow border rounded-md p-2 focus:border-blue-400 focus:outline-none" oninput="debouncedFetchSuggestions()">
+                    <div id="suggestions" class="absolute bg-white border rounded-md mt-1 hidden"></div>
+                    <button style="background-color: #947c69;"
+                        class="text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none transform transition-transform duration-300 hover:-translate-y-0.5">
+                        Send
+                    </button>
+                </form>
+            </div>
+            <div id="uploadSection"
+                class="bg-gray-50 flex flex-col items-center p-5 bg-white shadow-md rounded-lg w-1/4 max-w-sm space-y-3 relative">
+                <h2 class="text-xl font-semibold mb-4">Upload Documents</h2>
+
+                <!-- Drag and drop zone -->
+                <div class="border-dashed border-2 border-gray-400 rounded-md p-6 w-full relative group hover:bg-blue-50 transition-all"
+                    ondrop="dropHandler(event)" ondragover="dragOverHandler(event)"
+                    ondragleave="dragLeaveHandler(event)">
+                    <input type="file" id="fileInput" accept="application/pdf"
+                        class="absolute top-0 left-0 opacity-0 w-full h-full cursor-pointer" onchange="uploadFile()" />
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <svg class="w-10 h-10 text-gray-400 group-hover:text-blue-500 transition-all" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M4 16v4a2 2 0 002 2h12a2 2 0 002-2v-4m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        <p class="text-gray-400 group-hover:text-blue-500 text-center transition-all">Drag & drop your
+                            files
+                            here or <span class="underline cursor-pointer">browse</span></p>
+                    </div>
+                </div>
+
+                <div id="uploadStatus" class="text-sm text-red-600 mt-2"></div>
+
+                <!-- Loading Spinner -->
+                <div id="upload-loading-spinner" class="hidden">
+                    <div class="upload-loader"></div>
+                    <p>Indexing...</p>
+                </div>
+
+
+                <h3 class="text-lg font-semibold mt-4">Uploaded Documents</h3>
+                <ul id='uploadedFiles' class="mt-4 space-y-2 w-full">
+                    <!-- Files will be appended here with JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts... -->
+    <script src="static/scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+pypdf
+llama-cpp-python
+sentence-transformers
+fastapi
+uvicorn
+websockets
+python-multipart
+cryptography
+chromadb

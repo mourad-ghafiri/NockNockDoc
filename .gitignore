@@ -1,0 +1,29 @@
+.DS_Store
+.vscode
+
+# Models
+models
+
+#Documents
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+profile_default/
+ipython_config.py
+
+# extensions and models
+*.gguf
+*.bin
+
+# pyenv
+.python-version

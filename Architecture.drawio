@@ -1,0 +1,82 @@
+<mxfile host="Electron" modified="2023-12-09T21:36:14.643Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="0ZzMoR5NcG1T-AbJwpMQ" version="22.1.2" type="device">
+  <diagram name="Page-1" id="2C6d-gQ309qO4pD7PwTt">
+    <mxGraphModel dx="2309" dy="878" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-1" target="cjCvPyRAgnISaWsA7HMy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-1" value="Upload Document" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-2" target="cjCvPyRAgnISaWsA7HMy-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-2" value="Chunk Document By Coherent Chunks" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-4" target="cjCvPyRAgnISaWsA7HMy-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-4" value="Get Chunk (i)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-6" target="cjCvPyRAgnISaWsA7HMy-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-6" value="Generate n Questions From LLM" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-8" value="Store Questions with metadata (document, chunk_index) in Vector Database" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="190" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-10" target="cjCvPyRAgnISaWsA7HMy-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-10" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-250" y="190" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-12" target="cjCvPyRAgnISaWsA7HMy-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-12" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="480" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-16" target="cjCvPyRAgnISaWsA7HMy-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-16" value="Question" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-18" target="cjCvPyRAgnISaWsA7HMy-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-18" value="Search Similar&amp;nbsp; k Questions" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-20" target="cjCvPyRAgnISaWsA7HMy-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-20" value="Get Chunk Content of Question by chunk_index" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cjCvPyRAgnISaWsA7HMy-22" target="cjCvPyRAgnISaWsA7HMy-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-22" value="Ask LLM to answer with provided Context" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-24" value="Provide Answer" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-35" value="Prompt to force LLM to generate a list of &lt;br&gt;n distinct Questions" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="465" y="60" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cjCvPyRAgnISaWsA7HMy-36" value="Prompt to force LLM&amp;nbsp;&lt;br&gt;to answer based&lt;br&gt;on the provided&lt;br&gt;Context" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="350" width="150" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
